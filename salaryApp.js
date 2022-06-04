@@ -225,7 +225,8 @@ const uniquifyNames = function (items) {
   const uniqueNames = {};
 
   return items.map(function (item) {
-    if (uniqueNames[item.name]) {
+    // same user bar bar chilo , tai eder unique name bananor jonno , tader namer por ekta kore white space diye deya hoise.
+    if (uniqueNames[item.name] !== undefined) {
       uniqueNames[item.name] += " ";
       item.name += uniqueNames[item.name];
     } else {
